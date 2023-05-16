@@ -2,10 +2,9 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import time
-import streamlit as st
+import matplotlib.pyplot as plt
 import requests
 import json
-#import matplotlib as plt
 
 
 sequence1 = 'MKLWIVLLAVICTSWLSMVEKLPRITTIQNENKPIGIFREVRFTTEGANRRSYQIFMNELYDALTERADNGGVIPVLPSPLPEPDDHRQYVLVELSNEYQSVKLALNVSDMYIFGYHPGDGDTSYFFDGVEEDVRNALFPDSTVRRDLPYTGMYGSLENYAGVNDRRDIPLGTGELSQHINYMNIITQLDSSTLAKALLVCIQMVSEAVRLRNLQHKILEVADPDADGTYGVYYPDLLMTQYEGAWGKISVAVQSTTNGIFTRPVPLKKSDREFFDLKSVKEVIFIVGIISKKCNERGNVQIFPTSTSASESSSLLPIPMRSTSLESNDDTCEIALAPTSYITGRNGLCVDVYQESYRNGNKIILSKCGQNKASQLWELRMYDNTIRSGGKCLTTTGYNSGSYVMIHDCETAISDATKWEIQSDGAIRNPKSELVLTASEDSWGVINLVVDKNIYASKQAWYASNITKPPVTTIVGYQGLCLLAFQSSVWLELCVSYNIEQQWAIYPDGTIRPPKNQDGCLKYANAGEDVVRVGTCDGGTEERWRFQSDGTILHVVTRKVMDVKDTTAILPEITVNNYNRRNTQIWFQLWIVLLAIIFTSWLSMVEKRPRITTIQNENKPIGIFREYDALTERADKSGVIPVLPSPLPEPDDHRQYVLGELSNEYQSIKLALNVSDVYILGYHLGDSDTSYFFKGVEEDVHSTVRRVLQYSGMYGSLEIYSGVNDRRGIPLGIDQLPQHINYVNIITQLDSGSIARALLVCIQMVSEAVRLRNLQHMELIMKVSRERSLKPSNLQQMESVQDQFV'
@@ -197,19 +196,35 @@ if st.checkbox('⏭ Show Information about the model precision'):
             response = requests.post("http://192.168.0.141:8080/api/applier/kbase/apply", data=payload, headers=headers)
 
             st.write(response.json()) 
-            evaluation_metrics = {
-                'Evaluation Metric': ['F Measure','Recall','Precision','Accuracy','SAAS Score','ROC AUC'],
-                'Value': [1,1,1,1,0.769,1],
-            }
+        evaluation_metrics = {
+                    'F Measure':[1],
+                    'Recall' : [1],
+                    'Precision': [1],
+                    'Accuracy': [1],
+                    'SAAS Score': [0.769],
+                    'ROC AUC': [1],
+                }
 
-            # Create a DataFrame from the dictionary
-            df = pd.DataFrame(evaluation_metrics)
+                # Create a DataFrame from the dictionary
+        df = pd.DataFrame(evaluation_metrics)
 
-            # Display the table
-            st.table(df)
-            st.write("  ")
-            st.write("  ")
-            ' ⏭⏭ Plotting Model''s Results ! '
-            st.write("  ")
+                # Plotting bar plot and line plot side by side
+        fig, axes = plt.subplots(1, 2, figsize=(10, 4))  # Adjust the figsize as needed
 
+        # Bar plot
+        axes[0].bar(df.columns, df.values.flatten())
+        axes[0].set_xlabel('Metrics')
+        axes[0].set_ylabel('Values')
+        axes[0].set_title('Evaluation Metrics Bar Plot')
 
+        # Line plot
+        df.T.plot(kind='line', ax=axes[1], marker='o')
+        axes[1].set_xlabel('Metrics')
+        axes[1].set_ylabel('Values')
+        axes[1].set_title('Evaluation Metrics Line Plot')
+
+        # Adjust spacing between subplots
+        plt.tight_layout()
+
+        # Display the plots using Streamlit
+        st.pyplot(fig)
