@@ -57,36 +57,115 @@ st.write("  ")
 st.write("  ")
 
 ##### Displaying infos about the sequences 
+### First Sequence
 if sequence == sequence1:
     le_column, ri_column, middle, alin,lign = st.columns(5)
     st.write("  ")
     middle.button('This Protein Sequence Exhibit enzymatic activity EC 3.2.2.22')
     st.write("  ")
-    ' 📈 📈 The protein Matches condition signature: IPR::IPR008949 '
+    ' 📈 📈 The protein Matches condition signature: IPR::IPR000772, IPR::IPR001574 '
     ' Protein Annotation: '
     le_column, ri_column = st.columns(2)
     le_column.button('EC::EC 3.2.2.22')
     ' Protein Sequence Length 🧬 '
     # You can use a column just like st.sidebar:
     le_column, ri_column = st.columns(2)
-    le_column.button('456 AA')
+    le_column.button('805 AA')
     ' Start location - Stop location '
     A, B, C, D, E, F, G, H, I,J, K, L= st.columns(12)
-    A.button('456 AffA')
-    B.button('456 rrA')
+    A.button('478')
+    B.button('586')
     ' The performed Analysis '
     A, B, C, D, E, F, G, H, I,J, K, L= st.columns(12)
     A.button(' Pfam')
-    B.button('PRINTS')
-    C.button('Gene3D')
     'InterPro annotations - accession'
     A, B, C, D, E, F, G, H= st.columns(8)
-    A.button('IPR002093')
+    A.button('IPR000772, IPR001574')
     'InterPro annotations - description'
     A, B, C, D, E, F, G, H= st.columns(8)
-    A.button('BRCA2 repeat')
+    A.button('Ricin B, lectin domain, Ribosome-inactivating protein')
 
-
+### Second Sequence
+if sequence == sequence2:
+    le_column, ri_column, middle, alin,lign = st.columns(5)
+    st.write("  ")
+    middle.button('This Protein Sequence Exhibit enzymatic activity EC 3.2.2.22')
+    st.write("  ")
+    ' 📈 📈 The protein Matches condition signature: IPR::IPR001574 '
+    ' Protein Annotation: '
+    le_column, ri_column = st.columns(2)
+    le_column.button('EC::EC 3.2.2.22')
+    ' Protein Sequence Length 🧬 '
+    # You can use a column just like st.sidebar:
+    le_column, ri_column = st.columns(2)
+    le_column.button('273 AA')
+    ' Start location - Stop location '
+    A, B, C, D, E, F, G, H, I,J, K, L= st.columns(12)
+    A.button('34')
+    B.button('212')
+    ' The performed Analysis '
+    A, B, C, D, E, F, G, H, I,J, K, L= st.columns(12)
+    A.button(' Pfam')
+    'InterPro annotations - accession'
+    A, B, C, D, E, F, G, H= st.columns(8)
+    A.button('IPR001574')
+    'InterPro annotations - description'
+    A, B, C, D, E, F, G, H= st.columns(8)
+    A.button('Ribosome-inactivating protein')
+### Third Sequence
+if sequence == sequence3:
+    le_column, ri_column, middle, alin,lign = st.columns(5)
+    st.write("  ")
+    middle.button('This Protein Sequence Exhibit enzymatic activity EC 3.2.2.22')
+    st.write("  ")
+    ' 📈 📈 The protein Matches condition signature: IPR::IPR001574 '
+    ' Protein Annotation: '
+    le_column, ri_column = st.columns(2)
+    le_column.button('EC::EC 3.2.2.22')
+    ' Protein Sequence Length 🧬 '
+    # You can use a column just like st.sidebar:
+    le_column, ri_column = st.columns(2)
+    le_column.button('508 AA')
+    ' Start location - Stop location '
+    A, B, C, D, E, F, G, H, I,J, K, L= st.columns(12)
+    A.button('432')
+    B.button('499')
+    ' The performed Analysis '
+    A, B, C, D, E, F, G, H, I,J, K, L= st.columns(12)
+    A.button(' Pfam')
+    'InterPro annotations - accession'
+    A, B, C, D, E, F, G, H= st.columns(8)
+    A.button('IPR001574')
+    'InterPro annotations - description'
+    A, B, C, D, E, F, G, H= st.columns(8)
+    A.button('Ribosome-inactivating protein')
+### Fourth Sequence
+if sequence == sequence3:
+    le_column, ri_column, middle, alin,lign = st.columns(5)
+    st.write("  ")
+    middle.button('This Protein Sequence Does not Exhibit enzymatic activity EC 3.2.2.22')
+    st.write("  ")
+    ' 📈 📈 The protein Matches condition signature: IPR::IPR013210, IPR::IPR000719 '
+    ' Protein Annotation: '
+    le_column, ri_column = st.columns(2)
+    le_column.button('EC::EC 3.2.2.22')
+    ' Protein Sequence Length 🧬 '
+    # You can use a column just like st.sidebar:
+    le_column, ri_column = st.columns(2)
+    le_column.button('662 AA')
+    ' Start location - Stop location '
+    A, B, C, D, E, F, G, H, I,J, K, L= st.columns(12)
+    A.button('478')
+    B.button('586')
+    ' The performed Analysis '
+    A, B, C, D, E, F, G, H, I,J, K, L= st.columns(12)
+    A.button(' Pfam')
+    'InterPro annotations - accession'
+    A, B, C, D, E, F, G, H= st.columns(8)
+    A.button('IPR013210, IPR000719')
+    'InterPro annotations - description'
+    A, B, C, D, E, F, G, H= st.columns(8)
+    A.button('Leucine-rich repeat-containing N-terminal, plant-type, Protein kinase domain')
 
 # Add a selectbox to the sidebar:
 add_selectbox = st.sidebar.selectbox(
