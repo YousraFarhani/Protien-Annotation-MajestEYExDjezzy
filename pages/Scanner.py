@@ -82,7 +82,7 @@ if sequence == sequence1:
     A, B, C, D, E, F, G, H= st.columns(8)
     A.button('IPR000772, IPR001574')
     'InterPro annotations - description'
-    A, B, C, D, E, F, G, H= st.columns(8)
+    A, B= st.columns(2)
     A.button('Ricin B, lectin domain, Ribosome-inactivating protein')
 
 ### Second Sequence
@@ -110,7 +110,7 @@ if sequence == sequence2:
     A, B, C, D, E, F, G, H= st.columns(8)
     A.button('IPR001574')
     'InterPro annotations - description'
-    A, B, C, D, E, F, G, H= st.columns(8)
+    A, B= st.columns(2)
     A.button('Ribosome-inactivating protein')
 ### Third Sequence
 if sequence == sequence3:
@@ -137,7 +137,7 @@ if sequence == sequence3:
     A, B, C, D, E, F, G, H= st.columns(8)
     A.button('IPR001574')
     'InterPro annotations - description'
-    A, B, C, D, E, F, G, H= st.columns(8)
+    A, B= st.columns(2)
     A.button('Ribosome-inactivating protein')
 ### Fourth Sequence
 if sequence == sequence3:
@@ -164,7 +164,7 @@ if sequence == sequence3:
     A, B, C, D, E, F, G, H= st.columns(8)
     A.button('IPR013210, IPR000719')
     'InterPro annotations - description'
-    A, B, C, D, E, F, G, H= st.columns(8)
+    A, B= st.columns(2)
     A.button('Leucine-rich repeat-containing N-terminal, plant-type, Protein kinase domain')
 
 # Add a selectbox to the sidebar:
