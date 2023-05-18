@@ -4,9 +4,9 @@ Cancer is a devastating disease that affects countless individuals worldwide. Wh
 
 In order to mitigate these side effects, researchers are diligently working towards discovering improved treatments. They have begun by extracting specific proteins and investigating whether they exhibit glycosylase activity. Identifying proteins with this activity could potentially lead to better cancer treatments with reduced side effects.
 
-To aid in this research, PredEC, an advanced tool, has been developed. Researchers can easily input their shortlisted protein sequence of interest into PredEc for rapid and accurate predictions regarding its enzymatic activity. The tool focuses specifically on the EC 3.2.2.22 activity, which is glycosylase-related. Furthermore, researchers can explore additional information about the protein sequence and visualize the precision of the AI model behind the predictive analysis to validate the results.
+To aid in this research, PredEC, an advanced tool, has been developed. Researchers can easily input their shortlisted protein sequence of interest into PredEc for rapid and accurate predictions regarding its enzymatic activity. The tool focuses specifically on the EC 3.2.2.22 activity, which is glycosylase-related. Furthermore, researchers can explore additional information about the protein sequence and visualize the precision of the AI model behind the predictive analysis to validate the results 🧬
 
-By leveraging PredEC, researchers can expedite their investigation process and make informed decisions based on the precise predictions provided by the tool. This project aims to contribute to the development of improved cancer treatments while minimizing the associated side effects.
+By leveraging PredEC, researchers can expedite their investigation process and make informed decisions based on the precise predictions provided by the tool. This project aims to contribute to the development of improved cancer treatments while minimizing the associated side effects 📈📊
 
 Using PredEC you can:
 - Input Protein Sequence: Start by obtaining the protein sequence of interest that you want to analyze for enzymatic activity.
