@@ -208,6 +208,8 @@ if st.checkbox('⏭ Show Information about the model precision'):
                 # Create a DataFrame from the dictionary
         df = pd.DataFrame(evaluation_metrics)
 
+        # Print the table
+        st.table(df)
                 # Plotting bar plot and line plot side by side
         fig, axes = plt.subplots(1, 2, figsize=(10, 4))  # Adjust the figsize as needed
 
