@@ -16,4 +16,4 @@ Using PredEC you can:
 - Explore Additional Information: Take advantage of any supplementary information or data offered by the PredEC tool. This may include details about the protein sequence, functional annotations, or related resources.
 - Visualize AI Model Precision: utilize the visualization capabilities of PredEC to assess the precision and accuracy of the AI model behind the predictive analysis. This step can help validate the reliability of the results obtained.
 
-![App1](image_path)
+![App1](Final app.png)
